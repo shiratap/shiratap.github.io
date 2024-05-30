@@ -5,75 +5,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Professional Portfolio</title>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f0f0f0;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #3a3f44;
-            color: #ffffff;
-            padding: 20px 0;
-            text-align: center;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background: #4caf50;
-        }
-        nav a {
-            color: #ffffff;
-            padding: 14px 20px;
-            text-decoration: none;
-            text-align: center;
-        }
-        nav a:hover {
-            background: #45a049;
-        }
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            overflow: hidden;
-        }
-        .main {
-            background: #ffffff;
-            padding: 20px;
-            margin-top: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .main h1 {
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-        .main h2 {
-            font-size: 20px;
-            margin-top: 20px;
-            margin-bottom: 10px;
-        }
-        .main p {
-            line-height: 1.6;
-        }
-        .experience-item {
-            margin-bottom: 20px;
-        }
-        .experience-item h3 {
-            font-size: 18px;
-            margin: 10px 0;
-        }
-        .experience-item p {
-            margin: 5px 0;
-        }
-        footer {
-            background-color: #3a3f44;
-            color: #ffffff;
-            text-align: center;
-            padding: 10px 0;
-            margin-top: 20px;
-        }
-    </style>
+      body {
+          font-family: 'Arial', sans-serif;
+          background-color: #f0f0f0;
+          color: #333;
+          margin: 0;
+          padding: 0;
+      }
+      header {
+          background-color: #3a3f44;
+          color: #ffffff;
+          padding: 20px 0;
+          text-align: center;
+      }
+      nav {
+          display: flex;
+          justify-content: center;
+          background: #4caf50;
+      }
+      nav a {
+          color: #ffffff;
+          padding: 14px 20px;
+          text-decoration: none;
+          text-align: center;
+      }
+      nav a:hover {
+          background: #45a049;
+      }
+      .dropdown {
+          position: relative;
+          display: inline-block;
+          margin-top: auto;
+          margin-bottom: auto;
+      }
+      .dropbtn {
+          background-color: #4caf50;
+          color: white;
+          border: none;
+          cursor: pointer;
+      }
+      .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #ffffff;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+      }
+      .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+      }
+      .dropdown-content a:hover {
+          background-color: #ddd;
+      }
+      .dropdown:hover .dropdown-content {
+          display: block;
+      }
+      .dropdown:hover .dropbtn {
+          background-color: #45a049;
+      }
+      .container {
+          width: 80%;
+          margin: 0 auto;
+          overflow: hidden;
+      }
+      .main {
+          background: #ffffff;
+          padding: 20px;
+          margin-top: 20px;
+          border-radius: 8px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .main h1 {
+          font-size: 24px;
+          margin-bottom: 20px;
+      }
+      .main h2 {
+          font-size: 20px;
+          margin-top: 20px;
+          margin-bottom: 10px;
+      }
+      .main p {
+          line-height: 1.6;
+      }
+      .experience-item {
+          margin-bottom: 20px;
+      }
+      .experience-item h3 {
+          font-size: 18px;
+          margin: 10px 0;
+      }
+      .experience-item p {
+          margin: 5px 0;
+      }
+      footer {
+          background-color: #3a3f44;
+          color: #ffffff;
+          text-align: center;
+          padding: 10px 0;
+          margin-top: 20px;
+      }
+  </style>
 </head>
 <body>
     <header>
@@ -82,13 +117,25 @@
         </div>
     </header>
     <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-        <a href="https://shiratap.github.io/SpencerHirataResume.pdf" target="_blank">Resume</a>
-    </nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a href="https://www.spencerhirata.com/SpencerHirataResume.pdf" target="_blank">Resume</a>
+      <div class="dropdown" class="dropbtn">
+          <a>Certificates</a>
+          <div class="dropdown-content">
+              <a href="https://www.spencerhirata.com/FoundationsOfCybersecurity.pdf" target="_blank">Google | Foundations Of Cybersecurity</a>
+              <a href="https://www.spencerhirata.com/PlayItSafeManageSecurityRisks.pdf" target="_blank">Google | Play It Safe: Manage Security Risks</a>
+              <a href="https://www.spencerhirata.com/ConnectAndProtectNetworksAndNetworkSecurity.pdf" target="_blank">Google | Connect And Protect: Networks and Network Security.pdf</a>
+              <a href="https://www.spencerhirata.com/ToolsOfTheTradeLinuxAndSQL.pdf" target="_blank">Google | Tools Of The Trade: Linux and SQL.pdf</a>
+              <a href="https://www.spencerhirata.com/AssetsThreatsAndVulnerabilities.pdf" target="_blank">Google | Assets, Threats, and Vulnerabilities</a>
+              <a href="https://www.spencerhirata.com/SoundTheAlarmDetectionAndResponse.pdf" target="_blank">Google | Sound the Alarm: Detection and Response</a>
+              <a href="https://www.spencerhirata.com/AutomateCybersecurityTaskswithPython.pdf" target="_blank">Google | Automate Cybersecurity Tasks with Python</a>
+          </div>
+      </div>
+  </nav>
     <div class="container">
         <section id="home" class="main">
             <h1>Welcome to My Portfolio</h1>
